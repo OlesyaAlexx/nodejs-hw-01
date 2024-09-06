@@ -9,4 +9,6 @@ export const countContacts = async () => {
     throw error;
   }
 };
-console.log(await countContacts());
+(async () => {
+  console.log(await countContacts());
+})();

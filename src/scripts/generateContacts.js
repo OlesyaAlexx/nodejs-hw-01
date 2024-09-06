@@ -4,8 +4,7 @@ import { createFakeContact } from '../utils/createFakeContact.js';
 
 const generateContacts = async (number) => {
   try {
-    const contact = await readContacts();
-    const contacts = JSON.parse(contact);
+    const contacts = await readContacts();
     for (let i = 0; i < number; i++) {
       contacts.push(createFakeContact());
     }

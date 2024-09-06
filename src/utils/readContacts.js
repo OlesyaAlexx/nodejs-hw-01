@@ -6,7 +6,7 @@ export const readContacts = async () => {
   try {
     const data = await fs.readFile(PATH_DB, 'utf8');
     if (data.trim() === '') {
-      return '[]'; // Повертаємо порожній масив як JSON
+      return [];
     }
     return JSON.parse(data);
   } catch (error) {
